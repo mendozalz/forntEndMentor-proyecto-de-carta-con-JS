@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+:root{
+--bright-orange: hsl(31, 77%, 52%);
+--dark-cyan: hsl(184, 100%, 22%);
+--very-dark-cyan: hsl(179, 100%, 13%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin:0;
+    padding:0;
+    height: 100%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+/* main class => principal */
+
+main.principal{
+    display: flex;
+    max-width: 768px;
+    min-width: 320px;
+}
+
+/* article class => col sedans, luxury, suvs*/
+
+.col{
+    color:white;
+    padding: 2rem;
+    /* Comenzamos aqui con la animación */
+    width: 25%;
+    transition: width .4s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+.col.activo{
+    width: 50%;
+}
+/* .col.activo p{
+    margin-bottom: 150px;
+} */
+.col:first-of-type{
+    border-radius:.8rem 0 0 .8rem;
+}
+.col:last-of-type{
+    border-radius: 0 .8rem .8rem 0;
+}
+.sedans{
+    background-color: var(--bright-orange);
+}
+.sedans .btn{
+    color: var(--bright-orange);
+}
+.luxury{
+    background-color: var(--dark-cyan);
+}
+.luxury .btn{
+    color: var(--dark-cyan);
+}
+.suvs{
+    background-color: var(--very-dark-cyan);
+}
+.suvs .btn{
+    color: var(--very-dark-cyan);
+}
+/* img class => icono */
+
+/* h2 class => Titulo*/
+
+.titulo{
+    font-family:'Big Shoulders Display', sans-serif;
+}
+
+/* p */
+
+p{
+    font-size: 14px;
+    margin-bottom: 4rem;
+    flex-grow: 1;
+}
+
+/* a class => btn */
+.btn{
+    font-size: 14px;
+    text-decoration: none;
+    background-color: white;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+}
